@@ -12,11 +12,11 @@ Most containers I found on docker hub have assumed few things like a meteor app 
 
 ## How to Use  
 
-1. Start a Mongodb container 
+1. Start a Mongodb container   
 	`Ex: $ docker run --name mymongodb -d mongo`
 2. Launch this container  
-	`$ docker run -i -t --name <new_container_name> -v <host_dir>:<container_mount_dir> --link mymongodb:db_1 -p 80:3000 meteor-dev)   
-     $ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 meteor-dev  `
+	`$ docker run -i -t --name <new_container_name> -v <host_dir>:<container_mount_dir> --link mymongodb:db_1 -p 80:3000 meteor-dev)     
+     $ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 meteor-dev  `  
 
 ## For Meteor Learners  
 
@@ -27,7 +27,9 @@ After launching this container (you will be in ~/app directory), simply type:
 	$ meteor  
 	Type http://localhost in your browser 
 
-	Remember, your app directory (my-first-app) will go away once you shutdown-your container. If you want your project to persist, then you need to create it on the host folder that you mounted into the continer ("/develop" from the above How to Use example)  
+Remember, your app directory (my-first-app) will go away once you shutdown-your container. If you want your project to persist, then you need to create it on the host folder that you mounted into the continer ("/develop" from the above How to Use example)  
+
+
 
 
 
