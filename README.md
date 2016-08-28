@@ -10,14 +10,24 @@ Most containers I found on docker hub have assumed few things like a meteor app 
 2. Starts the container in ~/apps directory. Any files created in here will go away along with the container. So, this space can be used for learning project.  
 3. Cotains fix for [this often encountered MongoDb issue](https://github.com/meteor/meteor/issues/4019)  
 
-### How to Use  
+### Launching this container 
 
 1. Start a Mongodb container   
 	`Ex: $ docker run --name mymongodb -d mongo`
 2. Launch this container  
 	`$ docker run -i -t --name <new_container_name> -v <host_dir>:<container_mount_dir> --link mymongodb:db_1 -p 80:3000 nhmtns/meteor-dev`    
 	Example:            
-	`$ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 nhmtns/meteor-dev`           
+	`$ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 nhmtns/meteor-dev`   
+
+
+### Using for Development  	
+
+1. cd to your project folder at the mount point ($ cd /develop)  
+2. run 'meteor' from the container  
+3. start editing project files using your fav editor installed on the host  
+4. see changes taking effect in the running instance   
+
+
 
 ### For Meteor Learners  
 
