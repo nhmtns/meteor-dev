@@ -15,8 +15,8 @@ Most containers I found on docker hub have assumed few things like a meteor app 
 1. Start a Mongodb container   
 	`Ex: $ docker run --name mymongodb -d mongo`
 2. Launch this container  
-	$ docker run -i -t --name <new_container_name> -v <host_dir>:<container_mount_dir> --link mymongodb:db_1 -p 80:3000 meteor-dev)       
-	$ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 meteor-dev  
+	`$ docker run -i -t --name <new_container_name> -v <host_dir>:<container_mount_dir> --link mymongodb:db_1 -p 80:3000 meteor-dev)       
+	$ docker run -i -t --name meteor -v /host/Development:/develop --link mymongodb:db_1 -p 80:3000 meteor-dev`    
 
 ## For Meteor Learners  
 
