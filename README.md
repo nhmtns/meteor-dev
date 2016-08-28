@@ -22,10 +22,10 @@ Most containers I found on docker hub have assumed few things like a meteor app 
 
 ### Using for Development  	
 
-1. cd to your project folder at the mount point ($ cd /develop)  
-2. run 'meteor' from the container  
-3. start editing project files using your fav editor installed on the host  
-4. see changes taking effect in the running instance   
+	1. cd to your project folder at the mount point ($ cd /develop)  
+	2. run 'meteor' from the container  
+	3. start editing project files using your fav editor installed on the host  
+	4. see changes taking effect in the running instance   
 
 
 
